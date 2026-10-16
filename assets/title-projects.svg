@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 70" width="1000" height="70">
+<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#00e5ff"/></linearGradient>
+<linearGradient id="sh" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+<g transform="translate(20 8)">
+  <polygon points="0,18 18,8 36,18 18,28" fill="#a994ff"/><polygon points="0,18 18,28 18,48 0,38" fill="#5a3de6"/><polygon points="36,18 18,28 18,48 36,38" fill="#3524a8"/>
+  <animateTransform attributeName="transform" type="translate" values="20 8;20 3;20 8" dur="3s" repeatCount="indefinite"/>
+</g>
+<text x="72" y="42" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="6" fill="url(#g)">PROJECTS</text>
+<rect x="72" y="54" width="900" height="3" rx="1.5" fill="#1d2440"/>
+<rect x="72" y="54" width="900" height="3" rx="1.5" fill="url(#g)"><animate attributeName="width" values="0;900" dur="1.6s" fill="freeze"/></rect>
+<rect x="72" y="53" width="120" height="5" rx="2.5" fill="url(#sh)"><animate attributeName="x" values="72;860" dur="2.6s" repeatCount="indefinite"/></rect>
+</svg>
