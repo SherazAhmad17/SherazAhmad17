@@ -46,9 +46,7 @@ const sheraz = {
 
 <div align="center">
 
-<img src="assets/skills.svg" width="100%" alt="Skills marquee" />
-
-<img src="https://skillicons.dev/icons?i=js,ts,react,nextjs,nodejs,express,mongodb,postgres,git,github,postman,vercel&perline=12" alt="skill icons" />
+<img src="assets/tech3d.svg" width="100%" alt="Tech stack: Next.js, NestJS, React, Node.js, TypeScript, JavaScript, MongoDB, PostgreSQL, Express, LangGraph" />
 
 </div>
 
