@@ -60,6 +60,12 @@
 ## Latest repositories
 
 <!-- REPOS:START -->
+- [Orbit](https://github.com/SherazAhmad17/Orbit) - No description (TypeScript)
+- [LangGraph_Custom_Agent](https://github.com/SherazAhmad17/LangGraph_Custom_Agent) - No description (TypeScript)
+- [LangGraph](https://github.com/SherazAhmad17/LangGraph) - No description (TypeScript)
+- [webRtc](https://github.com/SherazAhmad17/webRtc) - No description (JavaScript)
+- [ty](https://github.com/SherazAhmad17/ty) - No description (TypeScript)
+- [GenAi](https://github.com/SherazAhmad17/GenAi) - here we will learn genAi basic to advance (JavaScript)
 <!-- REPOS:END -->
 
 _This list refreshes daily via a GitHub Action._
