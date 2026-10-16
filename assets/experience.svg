@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 210" width="1000" height="210">
+<defs><filter id="g"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<rect x="2" y="2" width="996" height="206" rx="14" fill="#020a06" stroke="#00ff88" stroke-opacity=".5" stroke-width="2"/>
+<rect x="2" y="2" width="996" height="206" rx="14" fill="none" stroke="#00ff88" stroke-width="2" stroke-dasharray="120 2700" ><animate attributeName="stroke-dashoffset" values="0;-2820" dur="7s" repeatCount="indefinite"/></rect>
+<line x1="56" y1="40" x2="56" y2="190" stroke="#00ff88" stroke-opacity=".3" stroke-dasharray="4 6"/>
+<circle cx="56" cy="52" r="9" fill="#00ff88" filter="url(#g)"/><circle cx="56" cy="52" r="9" fill="none" stroke="#00ff88"><animate attributeName="r" values="9;24" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="2s" repeatCount="indefinite"/></circle>
+<g font-family="'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+<text x="92" y="48" font-size="24" font-weight="800" fill="#eafff3">AI FULL STACK DEVELOPER</text>
+<text x="92" y="76" font-size="16" font-weight="600" fill="#00ff88">Uconnect Technologies Pvt. Ltd.</text>
+<rect x="880" y="30" width="86" height="32" rx="16" fill="none" stroke="#00ff88"/><text x="923" y="52" text-anchor="middle" font-family="'Cascadia Code','Consolas','Courier New',monospace" font-size="16" font-weight="700" fill="#00ff88">2026</text>
+<g font-size="15" fill="#bfe9d1">
+<text x="92" y="118"><tspan fill="#00ff88" font-family="'Cascadia Code','Consolas','Courier New',monospace">&gt;</tspan> Develop and maintain SaaS platforms, e-commerce systems and AI-powered applications.</text>
+<text x="92" y="148"><tspan fill="#00ff88" font-family="'Cascadia Code','Consolas','Courier New',monospace">&gt;</tspan> Build scalable REST APIs and backend services.</text>
+<text x="92" y="178"><tspan fill="#00ff88" font-family="'Cascadia Code','Consolas','Courier New',monospace">&gt;</tspan> Collaborate on multiple products including Gilgit App and QuoHR.</text>
+</g></g></svg>
