@@ -55,7 +55,6 @@
 <img src="https://raw.githubusercontent.com/SherazAhmad17/SherazAhmad17/output/github-contribution-grid-snake-dark.svg" alt="snake" width="100%" />
 
 <img height="175" src="https://github-readme-stats.vercel.app/api?username=SherazAhmad17&show_icons=true&count_private=true&bg_color=000000&title_color=00AB44&icon_color=924FF7&text_color=FFFFFF&border_color=26262A" alt="stats" />
-<img height="175" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SherazAhmad17&layout=compact&bg_color=000000&title_color=00AB44&text_color=FFFFFF&border_color=26262A" alt="languages" />
 
 <img src="https://streak-stats.demolab.com?user=SherazAhmad17&background=000000&stroke=26262A&ring=00AB44&fire=F26D00&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=00AB44&sideLabels=924FF7&dates=9A9AA2&border=26262A" alt="streak" />
 
