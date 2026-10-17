@@ -171,9 +171,6 @@ function hero() {
   const dd = drawDots({ id: "h", str: "SHERAZ AHMAD", x: 56, y: 208, size, colorAt: (i, w) => w === 1 ? C.green2 : C.white });
   const b = bot({ id: "hb", seq: ["building", "iterating", "testing", "shipping", "thinking", "designing"], period: 5, x: 668, y: 118, s: 1.56 });
   let body = frame(W, H);
-  // 2 years pill
-  const pw = width(F.m, "2 years experience", 14) + 36;
-  body += `<rect x="56" y="58" width="${pw}" height="34" rx="17" fill="${C.white}"/>` + T(F.m, "2 years experience", 56 + pw / 2, 79.5, 14, "#000", { anchor: "middle" }) + cornerDots(56, 58, pw, 34, 0.5, 4);
   body += dd.body;
   body += T(F.m, "AI Full Stack Developer", 58, 262, 24, C.white);
   body += T(F.r, "I turn ideas into intelligent products that solve real problems.", 58, 296, 17, C.grey);
