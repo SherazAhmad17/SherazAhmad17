@@ -282,6 +282,47 @@ function footer() {
   return svgWrap(W, H, dd.css + b.css, dd.defs, body);
 }
 
+
+/* =============================================================== GITHUB ACTIVITY =============================================================== */
+function activity() {
+  const data = JSON.parse(fs.readFileSync(path.join(here, "activity-data.json"), "utf8"));
+  const days = data.weeks.flat(), today = new Date().toISOString().slice(0, 10);
+  let longest = 0, run = 0;
+  for (const [, c] of days) { run = c > 0 ? run + 1 : 0; longest = Math.max(longest, run); }
+  let current = 0; { let i = days.length - 1; if (days[i][0] > today || days[i][1] === 0) i--; for (; i >= 0 && days[i][1] > 0; i--) current++; }
+  const W = 1000, tw = 232, th = 116, gap = 24;
+  const tiles = [["Contributions", String(data.total), "in the last year", C.green2], ["Current streak", String(current), current === 1 ? "day" : "days", C.blue], ["Longest streak", String(longest), longest === 1 ? "day" : "days", C.orange], ["Public repos", String(data.repos), data.stars + " stars earned", C.purple]];
+  let body = "", defs = "";
+  tiles.forEach(([label, num, sub, col], i) => {
+    const x = 1 + i * (tw + gap), y = 1, d = (i * 0.5).toFixed(2), dur = 6;
+    body += `<g><rect x="${x}" y="${y}" width="${tw}" height="${th}" rx="22" fill="${C.card}" stroke="${C.line}"><animate attributeName="rx" values="22;22;0;0;22" keyTimes="0;.12;.22;.6;.7" dur="${dur}s" begin="${d}s" repeatCount="indefinite"/></rect>` +
+      `<circle cx="${x + 24}" cy="${y + 28}" r="5" fill="${col}"/>` + T(F.mono, label.toUpperCase(), x + 38, y + 32.5, 11.5, C.dim, { ls: 1.2 }) +
+      T(F.m, num, x + 22, y + 82, 46, C.white) + T(F.r, sub, x + 22 + width(F.m, num, 46) + 12, y + 82, 15, C.grey) + cornerDots(x, y, tw, th, +d + dur * 0.12, dur) + `</g>`;
+  });
+  // heatmap card
+  const top = th + 24, cardH = 214, cell = 14, step = 17.2, gx = 36, gy = top + 62, cols = data.weeks.length;
+  body += frame(W, cardH, 22).replace('y=".5"', `y="${top + .5}"`).replace(`height="${cardH - 1}"`, `height="${cardH - 1}"`);
+  body += `<circle cx="36" cy="${top + 34}" r="5" fill="${C.green2}"/>` + T(F.mono, "CONTRIBUTION ACTIVITY", 50, top + 38.5, 11.5, C.dim, { ls: 1.2 });
+  const max = Math.max(1, ...days.map(d => d[1])), shade = c => c === 0 ? "#141417" : c / max < .25 ? "#0e4a24" : c / max < .5 ? "#0a7a35" : c / max < .75 ? C.green : "#4be37e";
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  let cells = "", lastM = -1;
+  data.weeks.forEach((wk, ci) => {
+    const m = new Date(wk[0][0]).getMonth();
+    if (m !== lastM && ci < cols - 2) { body += T(F.mono, months[m], gx + ci * step, top + 56, 11, C.dim); lastM = m; }
+    wk.forEach(([date, c, wd]) => { if (date <= today) cells += `<rect x="${fmt(gx + ci * step)}" y="${fmt(gy + wd * step)}" width="${cell}" height="${cell}" rx="3.5" fill="${shade(c)}"/>`; });
+  });
+  const gw = cols * step;
+  defs += `<mask id="cm"><g fill="#fff">${cells.replace(/fill="[^"]*"/g, 'fill="#fff"')}</g></mask><linearGradient id="band" x1="0" x2="1"><stop offset="0" stop-color="#4be37e" stop-opacity="0"/><stop offset=".5" stop-color="#4be37e" stop-opacity=".7"/><stop offset="1" stop-color="#4be37e" stop-opacity="0"/></linearGradient>`;
+  body += cells + `<g mask="url(#cm)"><rect x="${gx - 120}" y="${gy - 4}" width="120" height="${7 * step + 4}" fill="url(#band)"><animate attributeName="x" values="${gx - 120};${fmt(gx + gw)}" dur="5s" repeatCount="indefinite"/></rect></g>`;
+  // legend
+  const lx = W - 36 - 5 * 17.2 - 60;
+  body += T(F.mono, "Less", lx, top + 38.5, 11, C.dim);
+  ["#141417", "#0e4a24", "#0a7a35", C.green, "#4be37e"].forEach((c, i) => body += `<rect x="${fmt(lx + 40 + i * 17.2)}" y="${top + 26}" width="${cell}" height="${cell}" rx="3.5" fill="${c}"/>`);
+  body += T(F.mono, "More", lx + 40 + 5 * 17.2 + 6, top + 38.5, 11, C.dim);
+  body += cornerDots(0, top, W, cardH, 0.6, 6);
+  return svgWrap(W, top + cardH + 4, "", defs, body);
+}
+
 /* ---------------- write everything ---------------- */
 const files = [
   ["hero.svg", hero()],
@@ -296,6 +337,7 @@ const files = [
   card("card-quohr.svg", { n: "02", role: "Junior Developer", name: "QuoHR", sub: "Workforce attendance system", d1: "Geolocation-based attendance for on-site workers.", d2: "Automatic checkout when leaving the workplace area.", tags: ["Geolocation", "Attendance", "Workforce"], mode: "iterating", delay: 0.4 }),
   card("card-careerforge.svg", { n: "03", role: "Team project", name: "CareerForge", sub: "AI career platform", d1: "AI CV builder, blog and real-time notifications.", d2: "Stripe subscriptions, Google and LinkedIn login.", tags: ["React", "Express 5", "MongoDB", "Stripe", "Groq"], mode: "designing", delay: 0.8 }),
   card("card-ailab.svg", { n: "04", role: "Personal projects", name: "AI Lab", sub: "GenAI / LangGraph / WebRTC", d1: "Agents, GenAI and real-time experiments.", d2: "GenAi, LangGraph_Custom_Agent, webRtc, Sass.", tags: ["LangGraph", "GenAI", "WebRTC"], mode: "building", delay: 1.2 }),
+  ["activity.svg", activity()],
   ["footer.svg", footer()],
 ];
 for (const [name, svg] of files) { fs.writeFileSync(path.join(out, name), svg); console.log(name.padEnd(24), (svg.length / 1024).toFixed(1) + " KB"); }
