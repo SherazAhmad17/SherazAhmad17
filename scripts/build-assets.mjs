@@ -277,7 +277,7 @@ function footer() {
   const dd = drawDots({ id: "f", str: "Let's build something", x: 50, y: 150, size, colorAt: (i, w) => w === 2 ? C.green2 : C.white, cycle: 11, wave: 5 });
   const b = bot({ id: "fb", seq: ["shipping", "building", "testing"], period: 6, x: 770, y: 30, s: 1.2 });
   let body = frame(W, H) + dd.body;
-  body += T(F.r, "Open to collaboration  ·  Gilgit, Pakistan", 52, 196, 17, C.grey);
+  body += T(F.r, "Open to collaboration", 52, 196, 17, C.grey);
   const em = "sherazahmad7434@gmail.com", ew = width(F.m, em, 16) + 56;
   body += ctaPill(50, 226, ew, 48, em, { size: 16, delay: 1.5, dur: 5 });
   body += T(F.m, "Thanks for visiting", 50, 308, 13, C.dim);
@@ -290,13 +290,11 @@ const files = [
   ["hero.svg", hero()],
   title("title-about.svg", "About me", "[01]"),
   title("title-skills.svg", "Tech stack", "[02]"),
-  title("title-experience.svg", "Experience", "[03]"),
-  title("title-projects.svg", "Featured projects", "[04]"),
-  title("title-github.svg", "GitHub activity", "[05]"),
-  title("title-contact.svg", "Get in touch", "[06]"),
+  title("title-projects.svg", "Featured projects", "[03]"),
+  title("title-github.svg", "GitHub activity", "[04]"),
+  title("title-contact.svg", "Get in touch", "[05]"),
   ["terminal.svg", terminal()],
   ["tech3d.svg", tech()],
-  ["experience.svg", experience()],
   card("card-gilgit.svg", { n: "01", role: "Full Stack Developer", name: "Gilgit App", sub: "E-commerce platform", d1: "Features for discovering and purchasing products.", d2: "Backend APIs and full-stack product/user workflows.", tags: ["E-commerce", "REST APIs", "Full stack"], mode: "testing", delay: 0 }),
   card("card-quohr.svg", { n: "02", role: "Junior Developer", name: "QuoHR", sub: "Workforce attendance system", d1: "Geolocation-based attendance for on-site workers.", d2: "Automatic checkout when leaving the workplace area.", tags: ["Geolocation", "Attendance", "Workforce"], mode: "iterating", delay: 0.4 }),
   card("card-careerforge.svg", { n: "03", role: "Team project", name: "CareerForge", sub: "AI career platform", d1: "AI CV builder, blog and real-time notifications.", d2: "Stripe subscriptions, Google and LinkedIn login.", tags: ["React", "Express 5", "MongoDB", "Stripe", "Groq"], mode: "designing", delay: 0.8 }),

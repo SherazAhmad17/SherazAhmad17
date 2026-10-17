@@ -9,7 +9,6 @@
 <br/>
 
 <a href="mailto:sherazahmad7434@gmail.com"><img src="https://img.shields.io/badge/EMAIL-sherazahmad7434%40gmail.com-00AB44?style=for-the-badge&logo=gmail&logoColor=white&labelColor=000000" /></a>
-<img src="https://img.shields.io/badge/LOCATION-Gilgit%2C_Gilgit--Baltistan-924FF7?style=for-the-badge&logo=googlemaps&logoColor=white&labelColor=000000" />
 <img src="https://komarev.com/ghpvc/?username=SherazAhmad17&style=for-the-badge&color=006AFF&labelColor=000000&label=PROFILE+VIEWS" />
 
 </div>
@@ -26,21 +25,6 @@
 
 <div align="center">
 <img src="assets/tech3d.svg" width="100%" alt="Tech stack: Next.js, React, TypeScript, JavaScript, LangGraph, Node.js, NestJS, Express, MongoDB, PostgreSQL" />
-</div>
-
-| Area | Technologies |
-|---|---|
-| **Languages** | JavaScript, TypeScript |
-| **Frontend** | React.js, Next.js |
-| **Backend** | Node.js, Express.js, REST APIs |
-| **Databases** | MongoDB, PostgreSQL |
-| **AI** | AI Integration, AI Agents, LangGraph, Chatbots, Tool Calling |
-| **Tools & Deploy** | Git, GitHub, Postman, Vercel, Render |
-
-<img src="assets/title-experience.svg" width="100%" alt="Experience" />
-
-<div align="center">
-<img src="assets/experience.svg" width="100%" alt="AI Full Stack Developer at Uconnect Technologies Pvt. Ltd., 2026" />
 </div>
 
 <img src="assets/title-projects.svg" width="100%" alt="Projects" />
@@ -79,22 +63,11 @@
 
 </div>
 
-### 🕒 Latest repositories
-
-<!-- REPOS:START -->
-- [Orbit](https://github.com/SherazAhmad17/Orbit) - No description (TypeScript)
-- [LangGraph_Custom_Agent](https://github.com/SherazAhmad17/LangGraph_Custom_Agent) - No description (TypeScript)
-- [LangGraph](https://github.com/SherazAhmad17/LangGraph) - No description (TypeScript)
-- [webRtc](https://github.com/SherazAhmad17/webRtc) - No description (JavaScript)
-- [ty](https://github.com/SherazAhmad17/ty) - No description (TypeScript)
-- [GenAi](https://github.com/SherazAhmad17/GenAi) - here we will learn genAi basic to advance (JavaScript)
-<!-- REPOS:END -->
-
 <img src="assets/title-contact.svg" width="100%" alt="Contact" />
 
 <div align="center">
 
-📧 **sherazahmad7434@gmail.com** &nbsp;|&nbsp; 📍 **Gilgit, Gilgit-Baltistan** &nbsp;|&nbsp; 🗣️ **English, Urdu**
+📧 **sherazahmad7434@gmail.com**
 
 <img src="assets/footer.svg" width="100%" alt="Let's build something" />
 
