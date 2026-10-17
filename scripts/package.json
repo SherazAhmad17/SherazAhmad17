@@ -1,0 +1,7 @@
+{
+  "name": "profile-assets",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "node build-assets.mjs" },
+  "dependencies": { "opentype.js": "1.3.4" }
+}
